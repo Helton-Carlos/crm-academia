@@ -1,8 +1,18 @@
 <template>
-  <div>
-    <router-view />
+  <div class="flex">
+    <Menu />
+    <Home />
   </div>
 </template>
+
+<script>
+import Menu from "@/components/Menu.vue";
+import Home from "@/views/Home.vue";
+export default {
+  name: "App",
+  components: { Menu, Home },
+};
+</script>
 
 <style>
 * {
@@ -12,11 +22,10 @@
 }
 body {
   background-color: rgb(230, 230, 230);
-  font-family: 'Gemunu Libre', sans-serif;
+  font-family: "Gemunu Libre", sans-serif;
 }
 .flex {
   display: flex;
-  align-items: center;
 }
 .flex-container {
   display: flex;
@@ -24,12 +33,11 @@ body {
   margin: 0 auto;
   justify-content: space-between;
 }
-.flex-coluna{
+.flex-coluna {
   display: flex;
   flex-direction: column;
 }
-a{
- text-decoration: none;
+a {
+  text-decoration: none;
 }
 </style>
-
