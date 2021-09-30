@@ -1,28 +1,21 @@
 <template>
-  <div class="flex">
-    <table>
-      <th>
-        <h1>Colaborador</h1>
-        <tr>
-          <th>Escala</th>
-          <th>Colaborador</th>
-          <th>Stautus</th>
-        </tr>
-        <tr>
-          <td>11:00 às 17:00</td>
-          <td>Helton</td>
-          <td>Ativo</td>
-        </tr>
-      </th>
-    </table>
+  <div>
+    <div class="flex-container">
+      <Tabela />
+      <Planos />
+    </div>
   </div>
 </template>
 
 <script>
-
+import Tabela from "@/components/Tabela.vue";
+import Planos from "@/components/Planos.vue";
+export default {
+  name: "Home",
+  components: { Tabela, Planos },
+};
 </script>
 
-
 <style scoped>
-td,tr{margin-left:20px;background-color: red;padding:5px 10px;}
+
 </style>

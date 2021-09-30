@@ -1,16 +1,15 @@
 <template>
   <div class="flex">
-    <Menu />
-    <Home />
+    <div><Menu /></div>
+    <router-view />
   </div>
 </template>
 
 <script>
 import Menu from "@/components/Menu.vue";
-import Home from "@/views/Home.vue";
 export default {
+  components: { Menu },
   name: "App",
-  components: { Menu, Home },
 };
 </script>
 
@@ -21,7 +20,7 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(131, 113, 107);
   font-family: "Gemunu Libre", sans-serif;
 }
 .flex {
