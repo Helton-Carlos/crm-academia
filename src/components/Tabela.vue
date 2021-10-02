@@ -36,16 +36,15 @@ export default {
 <style scoped>
 table {
   width: 100%;
-  margin: 10px;
+  margin: 30px;
 }
 td {
   background-color: none;
   border: 2px solid #000000;
   font-size: 20px;
   color: #000000;
-  padding: 15px 30px;
+  padding: 8px 30px;
 }
-
 .alinhar-center {
   display: flex;
   align-items: center;

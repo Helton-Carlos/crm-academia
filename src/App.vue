@@ -20,7 +20,7 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(131, 113, 107);
+  background-color: rgb(136, 131, 130);
   font-family: "Gemunu Libre", sans-serif;
 }
 .flex {
@@ -38,5 +38,11 @@ body {
 }
 a {
   text-decoration: none;
+}
+.base {
+  background-color: none;
+  border: 2px solid #000000;
+  padding: 15px 15px;
+  color: #000000;
 }
 </style>

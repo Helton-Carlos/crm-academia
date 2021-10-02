@@ -1,22 +1,9 @@
 <template>
   <div class="planos">
-    <div>
-      <h2>Plano Básico</h2>
+    <div v-for="plano in planos" :key="plano">
+      <h2>{{plano.titulo}}</h2>
       <ul class="retangulo">
-        <li>Adesão grátis</li>
-        <li>Manuteção Anual 100,00</li>
-        <li>Mesalidade 100,00</li>
-        <button>Comprar</button>
-      </ul>
-    </div>
-    <div>
-      <h2>Plano Top</h2>
-      <ul class="retangulo">
-        <li>Adesão grátis</li>
-        <li>Manuteção Anual 100,00</li>
-        <li>Mesalidade 120,00</li>
-        <li>Cadeira de massagem</li>
-        <li>5 convites mensais</li>
+        <li v-for="planos in plano['plano']" :key="planos">{{planos}}</li>
         <button>Comprar</button>
       </ul>
     </div>
@@ -27,10 +14,16 @@
 export default {
   setup() {
     return {
-      escala: [
-        { horario: "05:30 às 13:00", nome: "Helton", status: "Ativo" },
-        { horario: " 13:00 às 18:00", nome: "Tayná", status: "Ativo" },
-        { horario: " 18:00 às 23:00", nome: "Wagner", status: "Ativo" },
+      planos: [
+        {
+          titulo:"Plano Básico",
+          plano:['Adesão grátis','Manuteção Anual 100,00','Mesalidade 100,00']
+        },
+         {
+          titulo:"Plano Top",
+          plano:[ "Adesão grátis","Manuteção Anual 100,00","Mesalidade 120,00","Cadeira de massagem","5 convites mensais"]
+        }
+     
       ],
     };
   },

@@ -1,5 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h1>Cadastro</h1>
+    <InputCadastro />
   </div>
 </template>
+
+<script>
+import InputCadastro from "@/components/InputCadastro.vue";
+
+export default {
+  components: { InputCadastro },
+  setup() {},
+};
+</script>
+
+<style></style>
