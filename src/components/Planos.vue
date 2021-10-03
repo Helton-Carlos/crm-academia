@@ -3,7 +3,7 @@
     <div v-for="plano in planos" :key="plano">
       <h2>{{plano.titulo}}</h2>
       <ul class="retangulo">
-        <li v-for="planos in plano['plano']" :key="planos">{{planos}}</li>
+        <li v-for="planos in plano['plano']" :key="planos">{{planos}};</li>
         <button>Comprar</button>
       </ul>
     </div>
@@ -47,12 +47,16 @@ li {
   font-size: 20px;
 }
 button {
-  margin:10px 0;
+  margin:5px 0;
   cursor: pointer;
   font-size: 12px;
-  padding: 8px 20px;
+  font-size: 16px;
+  padding: 5px 20px;
   background-color: #000000;
-  color:rgb(131, 113, 107);
+  color:rgb(206, 206, 206);
   border: 2px solid #000000;
+}
+button:hover{
+  background-color: rgb(97, 97, 97);
 }
 </style>

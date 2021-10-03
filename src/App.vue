@@ -52,5 +52,5 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-.router-link-exact-active{color:red}
+
 </style>

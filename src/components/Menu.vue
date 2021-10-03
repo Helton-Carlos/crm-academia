@@ -18,7 +18,7 @@ export default {};
 
 <style scoped>
 .home {
-  background-color: rgb(97, 93, 93);
+  background-color: rgb(65, 65, 65);
   color: #fff;
   height: 100vh;
   width: 250px;
@@ -28,12 +28,17 @@ export default {};
   text-align: center;
 }
 h1 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 40px;
 }
 a {
   color: #fff;
-  padding: 10px;
+  padding: 15px 0px;
   font-size: 20px;
+  font-weight: 700;
+}
+.router-link-exact-active {
+  color: rgb(0, 0, 0);
 }
 </style>
