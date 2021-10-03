@@ -1,10 +1,10 @@
 <template>
   <div class="space-area">
     <h1>CRM</h1>
+    <Planos />
     <div class="flex">
       <Slide />
     </div>
-    <Planos />
   </div>
 </template>
 

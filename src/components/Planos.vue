@@ -22,6 +22,10 @@ export default {
          {
           titulo:"Plano Top",
           plano:[ "Adesão grátis","Manuteção Anual 100,00","Mesalidade 120,00","Cadeira de massagem","5 convites mensais"]
+        },
+         {
+          titulo:"Plano Premium",
+          plano:[ "Adesão grátis","Manuteção Anual 150,00","Mesalidade 150,00","Cadeira de massagem","5 convites mensais","Não precisa agendar","Treino de judô"]
         }
      
       ],
@@ -43,6 +47,7 @@ li {
   font-size: 20px;
 }
 button {
+  margin:10px 0;
   cursor: pointer;
   font-size: 12px;
   padding: 8px 20px;
