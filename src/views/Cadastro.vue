@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="space-area">
     <h1>Cadastro</h1>
     <InputCadastro />
   </div>

@@ -1,21 +1,29 @@
 <template>
-  <div>
-    <div class="flex-container">
-      <Tabela />
-      <Planos />
+  <div class="space-area">
+    <h1>CRM</h1>
+    <div class="flex">
+      <Slide />
     </div>
+    <Planos />
   </div>
 </template>
 
 <script>
-import Tabela from "@/components/Tabela.vue";
 import Planos from "@/components/Planos.vue";
+import Slide from "@/components/Slide.vue";
 export default {
   name: "Home",
-  components: { Tabela, Planos },
+  components: { Planos, Slide },
 };
 </script>
 
-<style scoped>
-
+<style>
+.planos {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: none;
+  border: 2px solid #000000;
+  padding: 15px 15px;
+  color: #000000;
+}
 </style>

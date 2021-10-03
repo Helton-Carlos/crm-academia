@@ -34,16 +34,13 @@ export default {
 </script>
 
 <style scoped>
-table {
-  width: 100%;
-  margin: 30px;
-}
-td {
+td, table {margin-right: 20px;
+  max-width: 100%;
   background-color: none;
   border: 2px solid #000000;
   font-size: 20px;
   color: #000000;
-  padding: 8px 30px;
+  padding: 8px 20px;
 }
 .alinhar-center {
   display: flex;

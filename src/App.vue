@@ -45,4 +45,12 @@ a {
   padding: 15px 15px;
   color: #000000;
 }
+.space-area{
+  margin: 20px 20px;
+}
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+.router-link-exact-active{color:red}
 </style>

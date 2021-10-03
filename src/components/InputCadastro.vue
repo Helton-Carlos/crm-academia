@@ -4,21 +4,29 @@
       type="text"
       name="text"
       id="text"
-      v-model="text"
+      v-model="inputs.text"
       placeholder="Nome Completo"
     />
-    <input type="text" name="cpf" id="cpf" v-model="cpf" placeholder="C.P.F" />
+    <input
+      type="text"
+      name="cpf"
+      id="cpf"
+      v-model="inputs.cpf"
+      placeholder="C.P.F"
+    />
     <input
       type="number"
       name="idade"
       id="idade"
-      v-model="idade"
+      v-model="inputs.idade"
       placeholder="Idade"
     />
     <h4>Possui doenças cardiovasculares?</h4>
-    <div>
-      <input type="checkbox" name="sim" id="sim" />Sim
-      <input type="checkbox" name="nao" id="nao" />Não
+    <div style="width:250px">
+      <input type="checkbox" name="sim" id="sim" />
+      <p>Sim</p>
+      <input type="checkbox" name="nao" id="nao" />
+      <p>Não</p>
     </div>
     <input type="submit" value="Enviar" />
   </div>
@@ -28,7 +36,11 @@
 export default {
   setup() {
     return {
-      text: "",
+      inputs: {
+        text: "",
+        cpf: "",
+        idade: "",
+      },
     };
   },
 };

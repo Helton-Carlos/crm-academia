@@ -1,5 +1,5 @@
 <template>
-  <div class="planos">
+  <div class="planos flex">
     <div v-for="plano in planos" :key="plano">
       <h2>{{plano.titulo}}</h2>
       <ul class="retangulo">
@@ -31,16 +31,10 @@ export default {
 </script>
 
 <style scoped>
-.planos {
-  width: 550px;
-  background-color: none;
-  border: 2px solid #000000;
-  padding: 15px 15px;
-  color: #000000;
-  margin: 32px 0px;
-}
+
 .retangulo {
   padding: 10px 10px;
+  margin-right: 20px;
   background-color: none;
   border: 2px solid #000000;
 }

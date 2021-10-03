@@ -5,8 +5,8 @@
         <h1>AdemCRM</h1>
         <router-link to="/">Início</router-link>
         <router-link to="/cadastro">Cadastro</router-link>
-        <router-link to="/Agendamento">Agendamento</router-link>
-        <router-link to="/sobre">Sobre</router-link>
+        <router-link to="/agendamento">Agendamento</router-link>
+        <router-link to="/academia">Academia</router-link>
       </div>
     </div>
   </div>
