@@ -1,6 +1,6 @@
 <template>
   <div class="space-area">
-    <h1>Agenda</h1>
+    <h1>Agendamento</h1>
   </div>
 </template>
 

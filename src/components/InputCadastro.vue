@@ -1,6 +1,6 @@
 <template>
   <div class="base">
-    <form @submit="enviar" class="flex-coluna">
+    <form @submit.prevent="enviar" class="flex-coluna">
       <label>Nome</label>
       <input
         type="text"
@@ -56,11 +56,15 @@ export default {
         idade: "",
         cardio: "",
       },
+      result: [],
     };
   },
   methods: {
     enviar() {
-      alert(this.inputs.cardio);
+      this.result.push({
+        inputs: this.inputs,
+      });
+     console.log(this.result);
     },
   },
 };
