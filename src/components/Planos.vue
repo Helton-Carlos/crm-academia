@@ -27,7 +27,6 @@ export default {
           titulo:"Plano Premium",
           plano:[ "Adesão grátis","Manuteção Anual 150,00","Mesalidade 150,00","Cadeira de massagem","5 convites mensais","Não precisa agendar","Treino de judô"]
         }
-     
       ],
     };
   },
@@ -52,9 +51,10 @@ button {
   font-size: 12px;
   font-size: 16px;
   padding: 5px 20px;
-  background-color: #000000;
-  color:rgb(206, 206, 206);
-  border: 2px solid #000000;
+  background-color: #4410fd;
+  color:rgb(224, 224, 224);
+  border:none;
+  border-radius: 15px;
 }
 button:hover{
   background-color: rgb(97, 97, 97);

@@ -79,6 +79,14 @@ input {
 input[type="text"] {
   width: 350px;
 }
+input[type="submit"]{
+background-color: blue;
+color:#fff;
+border:none;
+border-radius: 20px;
+}
+input[type="submit"]:hover{
+background-color: rgb(0, 0, 22);}
 h4 {
   margin: 5px;
 }

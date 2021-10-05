@@ -18,27 +18,31 @@ export default {};
 
 <style scoped>
 .home {
-  background-color: rgb(65, 65, 65);
-  color: #fff;
+  background-color: #fff;
+  color: rgb(10, 10, 78);
   height: 100vh;
-  width: 250px;
+  width: 200px;
+  box-shadow: rgb(0, 0, 0.5);
 }
 .center {
   margin: 0 auto;
   text-align: center;
 }
 h1 {
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
-  font-size: 40px;
+  font-size: 30px;
 }
 a {
-  color: #fff;
-  padding: 15px 0px;
+  color: rgb(0, 0, 0);
+  padding: 7px 15px;
   font-size: 20px;
+  margin:10px 0;
   font-weight: 700;
 }
 .router-link-exact-active {
-  color: rgb(0, 0, 0);
+  background-color:#5151f1;
+  border-radius: 20px;
+  color:#ffff
 }
 </style>
