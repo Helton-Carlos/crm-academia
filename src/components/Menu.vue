@@ -3,10 +3,18 @@
     <div class="home flex">
       <div class="center flex-coluna">
         <h1>AdemCRM</h1>
-        <router-link to="/">Início</router-link>
-        <router-link to="/cadastro">Cadastro</router-link>
-        <router-link to="/agendamento">Agendamento</router-link>
-        <router-link to="/academia">Academia</router-link>
+        <router-link to="/"
+          ><i class="fas fa-chart-line"></i> Início</router-link
+        >
+        <router-link to="/cadastro"
+          ><i class="fas fa-user"></i> Cadastro</router-link
+        >
+        <router-link to="/agendamento"
+          ><i class="fas fa-calendar-week"></i> Agendamento</router-link
+        >
+        <router-link to="/academia"
+          ><i class="fas fa-fire-alt"></i> Academia</router-link
+        >
       </div>
     </div>
   </div>
@@ -37,12 +45,12 @@ a {
   color: rgb(0, 0, 0);
   padding: 7px 15px;
   font-size: 20px;
-  margin:10px 0;
+  margin: 10px 0;
   font-weight: 700;
 }
 .router-link-exact-active {
-  background-color:#5151f1;
+  background-color: #5151f1;
   border-radius: 20px;
-  color:#ffff
+  color: #ffff;
 }
 </style>

@@ -64,7 +64,6 @@ export default {
       this.result.push({
         inputs: this.inputs,
       });
-     console.log(this.result);
     },
   },
 };
