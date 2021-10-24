@@ -15,6 +15,12 @@
         <router-link to="/academia"
           ><i class="fas fa-fire-alt"></i> Academia</router-link
         >
+         <router-link to="/grafico"
+          ><i class="fas fa-chart-bar"></i> Gráficos</router-link
+        >
+       <router-link to="/login"
+          ><i class="fas fa-sign-in-alt"></i> Sair</router-link
+        >
       </div>
     </div>
   </div>
