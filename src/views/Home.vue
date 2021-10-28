@@ -1,6 +1,5 @@
 <template>
   <div class="space-area">
-    <h1>CRM</h1>
     <Planos />
     <div class="flex">
       <Slide />
@@ -21,9 +20,9 @@ export default {
 .planos {
   margin-right: 20px;
   margin-bottom: 20px;
-  background-color: none;
-  border: 2px solid #000000;
+  background-color:#e0e0e0;
+  border-radius: 20px;
   padding: 15px 15px;
-  color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.5);
 }
 </style>
