@@ -2,7 +2,7 @@
   <div class="planos flex">
     <div v-for="plano in planos" :key="plano">
       <h2>{{plano.titulo}}</h2>
-      <ul class="retangulo">
+      <ul>
         <li v-for="planos in plano['plano']" :key="planos">{{planos}};</li>
         <button>Comprar</button>
       </ul>
@@ -35,11 +35,8 @@ export default {
 
 <style scoped>
 
-.retangulo {
-  padding: 10px 10px;
-  margin-right: 20px;
-  background-color: none;
-  border: 2px solid #000000;
+h2{
+padding-bottom: 20px;
 }
 li {
   margin: 2px 20px;
@@ -59,4 +56,5 @@ button {
 button:hover{
   background-color: rgb(97, 97, 97);
 }
+
 </style>
