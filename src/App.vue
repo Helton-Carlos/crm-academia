@@ -26,6 +26,10 @@ body {
 .flex {
   display: flex;
 }
+
+.flex-alinhar{
+  align-items: center;
+}
 .flex-container {
   display: flex;
   width: 80%;
