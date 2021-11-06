@@ -43,12 +43,7 @@ body {
 a {
   text-decoration: none;
 }
-.base {
-  background-color: none;
-  border: 2px solid #000000;
-  padding: 15px 15px;
-  color: #000000;
-}
+
 .space-area{
   margin: 20px 20px;
 }

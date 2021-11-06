@@ -58,7 +58,7 @@ a {
   font-weight: 700;
 }
 .router-link-exact-active {
-  background-color: #5151f1;
+   background-color: blueviolet;
   width: 100%;
   border-radius: 25px;
   color: #ffff;
