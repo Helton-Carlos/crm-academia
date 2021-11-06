@@ -1,7 +1,6 @@
 <template>
   <div class="space-area">
     <CardBase />
-   
   </div>
 </template>
 

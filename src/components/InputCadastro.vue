@@ -3,15 +3,15 @@
     <form @submit.prevent="enviar" class="flex-coluna">
       <label>Nome</label>
       <input
-        type="text"
-        name="text"
-        id="text"
-        v-model="inputs.text"
+        type="nome"
+        name="nome"
+        id="nome"
+        v-model="inputs.nome"
         placeholder="Nome Completo"
       />
       <label>C.P.F</label>
       <input
-        type="text"
+        type="nome"
         name="cpf"
         id="cpf"
         maxlength="12"
@@ -51,56 +51,63 @@ export default {
   setup() {
     return {
       inputs: {
-        text: "",
+        nome: "",
         cpf: "",
         idade: "",
         cardio: "",
-        diabetes:""
+        diabetes: "",
       },
-      result: [],
+      arrayResultado: [],
     };
   },
   methods: {
     enviar() {
-      this.result.push({
+      this.arrayResultado.unshift({
         inputs: this.inputs,
       });
+      console.log(this.arrayResultado);
     },
   },
 };
 </script>
 
 <style>
-
-label{font-size: 20px;padding-left: 10px;}
+label {
+  font-size: 20px;
+  padding-left: 10px;
+}
 
 input {
   padding: 10px;
-  border-radius: 4px;  
+  border-radius: 4px;
   font-size: 15px;
-  border:none;
-  margin: 5px;
+  border: none;
+  margin: 7px;
   outline: none;
   background-color: #f3f3f3;
-  color:#000000;
-  }
+  color: #000000;
+}
 
-input[type="text"] {
+input[type="nome"] {
   width: 400px;
 }
-input[type=text]:focus ,input[type=number]:focus, input[type=radio]:focus {
+input[type="nome"]:focus,
+input[type="number"]:focus,
+input[type="radio"]:focus {
   border: 2px solid rgb(147, 12, 209);
 }
 
-input[type="submit"]{
-margin: 10px 0;
-background-color: blueviolet;
-color:#fff;
-border:none;
-border-radius: 20px;
+input[type="submit"] {
+  margin: 10px 0;
+  background-color: blueviolet;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
 }
-input[type="submit"]:hover{
-background-color: rgb(0, 0, 22);}
+
+input[type="submit"]:hover {
+  background-color: rgb(0, 0, 22);
+}
 h4 {
   margin: 5px;
 }
