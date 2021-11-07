@@ -6,7 +6,7 @@
         type="nome"
         name="nome"
         id="nome"
-        v-model="inputs.nome"
+        v-model="nome"
         placeholder="Nome Completo"
       />
       <label>C.P.F</label>
@@ -15,7 +15,7 @@
         name="cpf"
         id="cpf"
         maxlength="12"
-        v-model="inputs.cpf"
+        v-model="cpf"
         placeholder="C.P.F"
       />
       <label>Idade</label>
@@ -24,21 +24,21 @@
         name="idade"
         id="idade"
         maxlength="3"
-        v-model="inputs.idade"
+        v-model="idade"
         placeholder="Idade"
       />
       <h4>Possui doenças cardiovasculares?</h4>
       <div>
-        <input type="radio" id="sim" value="sim" v-model="inputs.cardio" />
+        <input type="radio" id="sim" value="sim" v-model="cardio" />
         <label for="sim">Sim</label>
-        <input type="radio" id="nao" value="nao" v-model="inputs.cardio" />
+        <input type="radio" id="nao" value="nao" v-model="cardio" />
         <label for="nao">Não</label>
       </div>
       <h4>Possui problemas de diabetes?</h4>
       <div>
-        <input type="radio" id="sim" value="sim1" v-model="inputs.diabetes" />
+        <input type="radio" id="sim" value="sim" v-model="diabetes" />
         <label for="sim1">Sim</label>
-        <input type="radio" id="nao" value="nao1" v-model="inputs.diabetes" />
+        <input type="radio" id="nao" value="nao" v-model="diabetes" />
         <label for="nao1">Não</label>
       </div>
       <input type="submit" value="Enviar" />
@@ -50,22 +50,30 @@
 export default {
   setup() {
     return {
-      inputs: {
-        nome: "",
-        cpf: "",
-        idade: "",
-        cardio: "",
-        diabetes: "",
-      },
-      arrayResultado: [],
+      nome: "",
+      cpf: "",
+      idade: "",
+      cardio: "",
+      diabetes: "",
+      arrayInputs: [],
     };
   },
   methods: {
     enviar() {
-      this.arrayResultado.unshift({
-        inputs: this.inputs,
+      this.arrayInputs.unshift({
+        nome: this.nome,
+        cpf: this.cpf,
+        idade: this.idade,
+        cardio: this.cardio,
+        diabetes: this.diabetes,
       });
-      console.log(this.arrayResultado);
+        (this.nome = ""),
+        (this.cpf = ""),
+        (this.idade = ""),
+        (this.cardio = ""),
+        (this.diabetes = "");
+      this.$store.commit("pegarCadastro", this.arrayInputs);
+      
     },
   },
 };
