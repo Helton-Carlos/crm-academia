@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  setup() {
+  data() {
     return {
       nome: "",
       cpf: "",
@@ -60,20 +60,23 @@ export default {
   },
   methods: {
     enviar() {
-      this.arrayInputs.unshift({
-        nome: this.nome,
-        cpf: this.cpf,
-        idade: this.idade,
-        cardio: this.cardio,
-        diabetes: this.diabetes,
-      });
+      if (this.nome === "") {
+        alert("Preencha os campos!");
+      } else {
+        this.arrayInputs.unshift({
+          nome: this.nome,
+          cpf: this.cpf,
+          idade: this.idade,
+          cardio: this.cardio,
+          diabetes: this.diabetes,
+        });
+        this.$store.commit("pegarCadastro", this.arrayInputs);
         (this.nome = ""),
-        (this.cpf = ""),
-        (this.idade = ""),
-        (this.cardio = ""),
-        (this.diabetes = "");
-      this.$store.commit("pegarCadastro", this.arrayInputs);
-      
+          (this.cpf = ""),
+          (this.idade = ""),
+          (this.cardio = ""),
+          (this.diabetes = "");
+      }
     },
   },
 };
