@@ -1,13 +1,18 @@
 <template>
-  <div class="space-area">
-    <h1>Agendamento</h1>
+  <div class="flex">
+    <div>
+      <Menu />
+    </div>
+    <div class="space-area">
+      <h1>Agendamento</h1>
+    </div>
   </div>
 </template>
 
 <script>
-
+import Menu from "@/components/Menu.vue";
 export default {
-  setup() {},
+  components:{Menu}
 };
 </script>
 

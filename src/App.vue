@@ -1,14 +1,11 @@
 <template>
   <div class="flex">
-    <div><Menu /></div>
     <router-view />
   </div>
 </template>
 
 <script>
-import Menu from "@/components/Menu.vue";
 export default {
-  components: { Menu },
   name: "App",
 };
 </script>
