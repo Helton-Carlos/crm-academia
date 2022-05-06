@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div >
     <router-view />
   </div>
 </template>

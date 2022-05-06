@@ -82,7 +82,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 label {
   font-size: 20px;
   padding-left: 10px;

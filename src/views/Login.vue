@@ -1,11 +1,80 @@
 <template>
   <div>
-    <p>login</p>
+    <form style="background-color: #ccc; padding: 20px 30px 50px 30px">
+      <h2 style="padding: 5px 0">Sistema Ademick</h2>
+      <hr />
+      <div style="margin: 10px 0px" class="flex-coluna">
+        <label>Login</label>
+        <input type="text" v-model="usuario" placeholder="Digite seu login" />
+        <label>senha</label>
+        <input type="password" v-model="senha" placeholder="Digite sua senha" />
+      </div>
+      <button @click.prevent="Logar()">Logar</button>
+    </form>
   </div>
 </template>
 
 <script>
-export default {};
+import { senhaLogin } from "../commands/validacao";
+export default {
+  data() {
+    return {
+      usuario: "",
+      senha: "",
+    };
+  },
+  methods: {
+    Logar() {
+      let objs = senhaLogin().login;
+      for (let i = 0; i < objs.length; i++) {
+        if (this.usuario === objs[i].usuario && this.senha === objs[i].senha) {
+          this.confirmacaoLogin();
+        }
+      }
+    },
+    confirmacaoLogin() {
+      alert("hey")
+      this.$router.push({ name: "home" });
+    },
+  },
+  created() {},
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+form {
+  margin: 150px auto;
+  width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 0 0.4em rgb(207, 207, 207);
+}
+
+label {
+  font-weight: 700;
+  text-align: left;
+}
+input {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+button {
+  padding: 10px;
+  background: rgb(64, 32, 178);
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: rgb(14, 42, 134);
+}
+</style>
