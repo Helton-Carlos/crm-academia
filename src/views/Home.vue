@@ -15,5 +15,13 @@ import Menu from "@/components/Menu.vue";
 export default {
   name: "Home",
   components: { CardBase, Menu },
+  beforeRouteEnter(to, from, next) {
+    let login = JSON.parse(localStorage.getItem("login"));
+    console.log(login);
+    if (!login) {
+      next("/login");
+    }
+    next();
+  },
 };
 </script>

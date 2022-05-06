@@ -6,10 +6,11 @@
       <div style="margin: 10px 0px" class="flex-coluna">
         <label>Login</label>
         <input type="text" v-model="usuario" placeholder="Digite seu login" />
-        <label>senha</label>
+        <label>Senha</label>
         <input type="password" v-model="senha" placeholder="Digite sua senha" />
       </div>
-      <button @click.prevent="Logar()">Logar</button>
+      <p style="color:red;padding-bottom: 5px;" v-show="negado"><strong>Acesso negado...</strong></p>
+      <button @click.prevent="logar()">Logar</button>
     </form>
   </div>
 </template>
@@ -21,25 +22,26 @@ export default {
     return {
       usuario: "",
       senha: "",
+      negado:false
     };
   },
   methods: {
-    Logar() {
+    logar() {
       let objs = senhaLogin().login;
       for (let i = 0; i < objs.length; i++) {
         if (this.usuario === objs[i].usuario && this.senha === objs[i].senha) {
+          let login = objs[i];
+          localStorage.setItem("login", JSON.stringify(login));
           this.confirmacaoLogin();
-        }else{
-          
+        } else {
+          this.negado=true
         }
       }
     },
     confirmacaoLogin() {
-      alert("hey")
-      this.$router.push({ name: "home" });
+      this.$router.push({ name: "Home" });
     },
   },
-  created() {},
 };
 </script>
 
@@ -54,10 +56,11 @@ form {
 label {
   font-weight: 700;
   text-align: left;
+  padding: 10px 0px 5px 0px;
 }
 input {
   margin-bottom: 10px;
-  margin-top: 5px;
+  margin-top: 1px;
   padding: 8px;
   border: none;
   border-radius: 5px;
