@@ -29,6 +29,8 @@ export default {
       for (let i = 0; i < objs.length; i++) {
         if (this.usuario === objs[i].usuario && this.senha === objs[i].senha) {
           this.confirmacaoLogin();
+        }else{
+          
         }
       }
     },
